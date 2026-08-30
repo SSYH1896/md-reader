@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown 阅读器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="title-area">
+        <h1>Markdown 阅读器</h1>
+        <p id="fileName">正在载入考试重点.md</p>
+      </div>
+      <div class="actions" aria-label="文档操作">
+        <label class="file-button">
+          <input id="fileInput" type="file" accept=".md,.markdown,text/markdown,text/plain" />
+          打开 MD
+        </label>
+        <button id="printButton" type="button">导出 PDF</button>
+      </div>
+    </header>
+
+    <main class="reader-shell">
+      <aside class="toc-panel" aria-label="文档目录">
+        <div class="toc-title">目录</div>
+        <nav id="toc"></nav>
+      </aside>
+
+      <article class="paper">
+        <div id="emptyState" class="empty-state" hidden>
+          <h2>选择一个 Markdown 文件</h2>
+          <p>支持标题、加粗、列表、表格、引用、代码块、链接和图片等常见 Markdown 格式。</p>
+        </div>
+        <div id="markdownBody" class="markdown-body"></div>
+      </article>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
